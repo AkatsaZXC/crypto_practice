@@ -51,7 +51,9 @@ def encryption():
     #  Замена символов начального алфавита символами измененного, замена происходит по индексу
     print("Зашифрованное послание: ")
     for index in index_list:
-        print(f"{new_alphabet[index]}")
+        print(f"{new_alphabet[index]}", end='')
+
+    print('')
 
 
 def main():
