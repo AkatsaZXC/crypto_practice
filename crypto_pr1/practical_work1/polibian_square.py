@@ -56,8 +56,8 @@ def encryption():
             for x in fraze:
                 if x in alphabet_dict:
                     new_fraze += alphabet_dict[x]
-                elif x == " ":
-                    new_fraze += " "
+                else:
+                    new_fraze += x
             return new_fraze
 
         output = decoder(fraze)
