@@ -1,5 +1,5 @@
 import os
-from practical_work1 import slogan_cipher, polibian_square
+from practical_work1 import slogan_cipher, polibian_square, trithemius_cipher
 
 
 def menu_bar():
