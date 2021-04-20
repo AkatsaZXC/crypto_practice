@@ -33,20 +33,35 @@ def encryption():
             print(f"{s}", end='')
         print()
 
-        #  Создание словаря с ключами для шифрования
+        #  Создание словаря со значениями для шифрования
         alphabet_dict = {}
-        keys = [11, 12, 13, 14, 15, 16, 21, 22, 23, 24, 25, 26, 31, 32, 33, 34, 35, 36, 41, 42, 43, 44, 45, 46, 51, 52,
-                53, 54, 55, 56, 61, 62, 63, 64, 65, 66]
-        #  Заполнение словаря ключами из keys и элементами из alphabet_list
+        values = [11, 12, 13, 14, 15, 16, 21, 22, 23, 24, 25, 26, 31, 32, 33, 34, 35, 36, 41, 42, 43, 44, 45, 46, 51,
+                  52,
+                  53, 54, 55, 56, 61, 62, 63, 64, 65, 66]
+        values = list(map(str, values))
+        #  Заполнение словаря значениями из values и ключами из alphabet_list
         i = 0
-        for k in keys:
-            alphabet_dict[k] = alphabet_list[i]
-            i = i + 1
+        for i, k in enumerate(alphabet_list):
+            alphabet_dict[k] = values[i]
         print()
+        print(alphabet_dict)
 
-        fraze = input("Введите фразу для шифрования")
+        fraze = input("Введите фразу для шифрования:\n")
+        fraze = fraze.upper()
 
+        #  Кодирование сообщения по значению по ключу из словаря
+        def decoder(fraze):
+            new_fraze = ""
+            #  list_fraze = list(def_fraze)
+            for x in fraze:
+                if x in alphabet_dict:
+                    new_fraze += alphabet_dict[x]
+                elif x == " ":
+                    new_fraze += " "
+            return new_fraze
 
+        output = decoder(fraze)
+        print(output)
 
     elif result == 'N':
         pass
