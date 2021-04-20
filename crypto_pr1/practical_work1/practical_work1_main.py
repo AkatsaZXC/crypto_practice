@@ -8,6 +8,7 @@ ________________________________
     
     [1] Лозунговый шифр
     [2] Полибианский квадрат
+    [3] Шифр Тритемия
     """)
 
     cipher_number = input("Выберите номер шифра:\n")
@@ -21,6 +22,12 @@ ________________________________
     if cipher_number == '2':
         try:
             polibian_square.main()
+        except KeyboardInterrupt:
+            print("Выход...")
+            exit()
+    if cipher_number == '3':
+        try:
+            trithemius_cipher.main()
         except KeyboardInterrupt:
             print("Выход...")
             exit()
