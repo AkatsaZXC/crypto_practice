@@ -23,13 +23,30 @@ def encryption():
     if result == 'Y':
         alphabet_str = input("Введите алфавит:\n")
         #  Отрезать часть строки, если она больше 36
+        if len(alphabet_str) < 36:
+            print("Введите не менее 36 символов")
+            exit()
         alphabet_str = alphabet_str[:36].upper()
         alphabet_list = list(alphabet_str)
         print("Ваш алфавит:")
         for s in alphabet_list:
             print(f"{s}", end='')
         print()
-        print("Новый квадрат: ")
+
+        #  Создание словаря с ключами для шифрования
+        alphabet_dict = {}
+        keys = [11, 12, 13, 14, 15, 16, 21, 22, 23, 24, 25, 26, 31, 32, 33, 34, 35, 36, 41, 42, 43, 44, 45, 46, 51, 52,
+                53, 54, 55, 56, 61, 62, 63, 64, 65, 66]
+        #  Заполнение словаря ключами из keys и элементами из alphabet_list
+        i = 0
+        for k in keys:
+            alphabet_dict[k] = alphabet_list[i]
+            i = i + 1
+        print()
+
+        fraze = input("Введите фразу для шифрования")
+
+
 
     elif result == 'N':
         pass
