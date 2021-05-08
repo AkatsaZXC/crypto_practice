@@ -1,5 +1,5 @@
 import os
-from practical_work1 import practical_work1_main
+from crypto_pr1 import practical_work1_main
 from crypto_pr6 import crypto_pr_main
 
 
@@ -17,7 +17,7 @@ def menu_bar():
         except KeyboardInterrupt:
             print("Выход...")
             exit()
-    if practical_work_number == '2':
+    if practical_work_number == '6':
         try:
             print("Выбрана *Практическая работа №2*")
             crypto_pr_main.main()

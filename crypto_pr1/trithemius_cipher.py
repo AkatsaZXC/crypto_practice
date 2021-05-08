@@ -2,7 +2,7 @@ def encryption():
     print("Исходный алфавит: ")
     #  Заполнения алфвавита из строки и проверка на длину каждой строки
     alphabet_list = []
-    alphabet_str = "АБВГДЕЁЖЗИйКЛМНОПРСТУФХЦЧШЩЪЫьЭЮЯ-*#"
+    alphabet_str = "АБВГДЕЁЖЗИйКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ-*#"
     for s in alphabet_str:
         alphabet_list.append(s)
     k = 0
@@ -43,6 +43,30 @@ def encryption():
         if k == 6:
             print("\n")
             k = 0
+    print()
+
+    #  Запрос на фразу для шифрования
+    str_to_encrypt = input("Введите строку для шифрования: ").upper()
+    str_to_encrypt_list = list(str_to_encrypt)
+    print("Ваша строка: ")
+    print(str_to_encrypt)
+
+    # Замена букв в слове на символ в алфвавите + 6 шагов
+    indexes_list = list()
+    for s in str_to_encrypt_list:
+        if s in new_alphabet_list:
+            indexes_list.append(new_alphabet_list.index(s))
+    output_fraze = list()
+    for i in indexes_list:
+        if i >= 30:
+            output_fraze.append(new_alphabet_list[i - 30])
+        else:
+            output_fraze.append(new_alphabet_list[i + 6])
+
+    # Вывод итоговой фразы
+    print("Зашифрованная фраза: ")
+    for s in output_fraze:
+        print(s, end='')
     print()
 
 
