@@ -1,5 +1,4 @@
-import os
-from crypto_pr1 import slogan_cipher, polibian_square, trithemius_cipher, vegener_cipher
+from crypto_pr1 import slogan_cipher, polibian_square, trithemius_cipher, vigener_cipher
 
 
 def menu_bar():
@@ -38,8 +37,6 @@ ________________________________
         except KeyboardInterrupt:
             print("Выход...")
             exit()
-
-
 
 
 def main():
