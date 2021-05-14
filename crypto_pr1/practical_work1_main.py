@@ -1,5 +1,5 @@
 import os
-from crypto_pr1 import slogan_cipher, polibian_square, trithemius_cipher
+from crypto_pr1 import slogan_cipher, polibian_square, trithemius_cipher, vegener_cipher
 
 
 def menu_bar():
@@ -9,6 +9,7 @@ ________________________________
     [1] Лозунговый шифр
     [2] Полибианский квадрат
     [3] Шифр Тритемия
+    [4] Шифр Виженера
     """)
 
     cipher_number = input("Выберите номер шифра:\n")
@@ -31,6 +32,14 @@ ________________________________
         except KeyboardInterrupt:
             print("Выход...")
             exit()
+    if cipher_number == '4':
+        try:
+            vigener_cipher.main()
+        except KeyboardInterrupt:
+            print("Выход...")
+            exit()
+
+
 
 
 def main():
