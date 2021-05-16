@@ -2,13 +2,15 @@ import os
 from crypto_pr1 import practical_work1_main
 from crypto_pr6 import practical_work6_main
 from crypto_pr7 import practical_work7_main
+from crypto_pr9 import practical_work9_main
 
 
 def menu_bar():
     print("""
     [1]Практическая работа №1
     [6]Практическая работа №6
-    [7]Практическая работа №7""")
+    [7]Практическая работа №7
+    [9]Практическая работа №9""")
 
     practical_work_number = input("Выберите номер:\n")
 
@@ -30,6 +32,13 @@ def menu_bar():
         try:
             print("Выбрана *Практическая работа №7*")
             practical_work7_main.main()
+        except KeyboardInterrupt:
+            print("Выход...")
+            exit()
+    if practical_work_number == '9':
+        try:
+            print("Выбрана *Практическая работа №9*")
+            practical_work9_main.main()
         except KeyboardInterrupt:
             print("Выход...")
             exit()
