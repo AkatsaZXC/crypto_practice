@@ -5,7 +5,7 @@
  pip3 install -r requirements.txt
 ```
 
-### Как запуск программы
+### Запуск программы
 
 ```
 python3 main.py
