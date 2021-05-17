@@ -40,7 +40,7 @@ ________________________________
             exit()
     if cipher_number == '5':
         try:
-            hill_cipher.main()
+            print("Не добавлен")
         except KeyboardInterrupt:
             print("Выход...")
             exit()
